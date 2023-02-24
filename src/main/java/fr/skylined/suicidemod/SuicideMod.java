@@ -19,7 +19,6 @@ public class SuicideMod
 {
     public static final String MOD_ID = "suicidemod";
     private static final Logger LOGGER = LogUtils.getLogger();
-
     public SuicideMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
