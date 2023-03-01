@@ -24,7 +24,7 @@ public class FlyCharmItem extends Item implements ICurioItem {
         Player player = (Player)slotContext.entity();
         if(!player.level.isClientSide){
             if(player.getAbilities().flying){
-                if(random.nextFloat() > 0.9f){
+                if(random.nextFloat() > 0.9f && !player.isCreative()){
                     stack.setDamageValue(stack.getDamageValue() + 1);
                     if (stack.getDamageValue() >= stack.getMaxDamage()){
                         stack.setCount(0);

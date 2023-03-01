@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "suicidemod:block/electrical_cutter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "suicidemod:block/electrical_cutter"
+    },
+    "facing=south": {
+      "model": "suicidemod:block/electrical_cutter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "suicidemod:block/electrical_cutter",
+      "y": 270
+    }
+  }
+}

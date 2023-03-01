@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " U ",
+    "LOR",
+    " D "
+  ],
+  "key": {
+    "U": {
+      "item": "suicidemod:netherstar_fragment_up_foil"
+    },
+    "R": {
+      "item": "suicidemod:netherstar_fragment_right_foil"
+    },
+    "D": {
+      "item": "suicidemod:netherstar_fragment_down_foil"
+    },
+    "L": {
+      "item": "suicidemod:netherstar_fragment_left_foil"
+    },
+    "O": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "result": {
+    "item": "minecraft:nether_star"
+  }
+}

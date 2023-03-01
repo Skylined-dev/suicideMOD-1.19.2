@@ -1,4 +1,11 @@
 {
   "item.suicidemod.fly_charm": "Charm so you can fly very very very high",
-  "itemgroup.suicidemod_tab": "Suicide Mod"
+  "itemGroup.suicidemod_tab": "Suicide Mod",
+  "block.suicidemod.electrical_cutter": "Electrical Cutter",
+  "block.suicidemod.electrical_infuser": "Electrical Infuser",
+  "container.electrical_cutter": "Electrical Cutter",
+  "item.suicidemod.netherstar_fragment_up": "Top nether star fragment",
+  "item.suicidemod.netherstar_fragment_down": "Lower nether star fragment",
+  "item.suicidemod.netherstar_fragment_right": "Right nether star fragment",
+  "item.suicidemod.netherstar_fragment_left": "Left nether star fragment"
 }
