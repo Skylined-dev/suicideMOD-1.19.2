@@ -4,8 +4,13 @@
   "block.suicidemod.electrical_cutter": "Electrical Cutter",
   "block.suicidemod.electrical_infuser": "Electrical Infuser",
   "container.electrical_cutter": "Electrical Cutter",
+  "container.electrical_infuser": "Electrical Infuser",
   "item.suicidemod.netherstar_fragment_up": "Top nether star fragment",
   "item.suicidemod.netherstar_fragment_down": "Lower nether star fragment",
   "item.suicidemod.netherstar_fragment_right": "Right nether star fragment",
-  "item.suicidemod.netherstar_fragment_left": "Left nether star fragment"
+  "item.suicidemod.netherstar_fragment_left": "Left nether star fragment",
+  "item.suicidemod.netherstar_fragment_up_foil": "Top nether star fragment",
+  "item.suicidemod.netherstar_fragment_down_foil": "Lower nether star fragment",
+  "item.suicidemod.netherstar_fragment_right_foil": "Right nether star fragment",
+  "item.suicidemod.netherstar_fragment_left_foil": "Left nether star fragment"
 }

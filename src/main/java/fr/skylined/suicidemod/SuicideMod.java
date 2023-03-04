@@ -4,10 +4,14 @@ import com.mojang.logging.LogUtils;
 import fr.skylined.suicidemod.block.ModBlocks;
 import fr.skylined.suicidemod.block.entity.ModBlockEntities;
 import fr.skylined.suicidemod.item.ModItems;
+import fr.skylined.suicidemod.networking.ModMessages;
 import fr.skylined.suicidemod.recipe.ModRecipes;
 import fr.skylined.suicidemod.screen.ElectricalCutterScreen;
+import fr.skylined.suicidemod.screen.ElectricalInfuserMenu;
+import fr.skylined.suicidemod.screen.ElectricalInfuserScreen;
 import fr.skylined.suicidemod.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.CraftingTableBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,7 +46,9 @@ public class SuicideMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            ModMessages.register();
+        });
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -54,6 +60,8 @@ public class SuicideMod
         {
 
             MenuScreens.register(ModMenuTypes.ELECTRICAL_CUTTER_MENU.get(), ElectricalCutterScreen::new);
+            MenuScreens.register(ModMenuTypes.ELECTRICAL_INFUSER_MENU.get(), ElectricalInfuserScreen::new);
+
         }
     }
 }

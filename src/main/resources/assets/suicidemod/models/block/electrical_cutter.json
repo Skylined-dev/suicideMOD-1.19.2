@@ -1,10 +1,10 @@
 { "parent": "block/block",
   "render_type": "cutout",
   "textures": {
-    "particle": "block/cobblestone",
-    "bottom": "block/cobblestone",
-    "top": "block/cobblestone",
-    "side": "block/cobblestone",
+    "particle": "block/obsidian",
+    "bottom": "block/obsidian",
+    "top": "suicidemod:block/electrical_cutter_top",
+    "side": "suicidemod:block/electrical_cutter_side",
     "saw": "suicidemod:block/electrical_cutter_saw"
   },
   "elements": [

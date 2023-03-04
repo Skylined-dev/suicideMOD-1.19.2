@@ -14,6 +14,8 @@ public class ModBlockEntities {
 
     public static final RegistryObject<BlockEntityType<ElectricalCutterBlockEntity>> ELECTRICAL_CUTTER = BLOCK_ENTITIES.register("electrical_cutter", () ->
             BlockEntityType.Builder.of(ElectricalCutterBlockEntity::new, ModBlocks.ELECTRICAL_CUTTER.get()).build(null));
+    public static final RegistryObject<BlockEntityType<ElectricalInfuserBlockEntity>> ELECTRICAL_INFUSER = BLOCK_ENTITIES.register("electrical_infuser", () ->
+            BlockEntityType.Builder.of(ElectricalInfuserBlockEntity::new, ModBlocks.ELECTRICAL_INFUSER.get()).build(null));
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);
     }

@@ -4,8 +4,13 @@
   "block.suicidemod.electrical_cutter": "Tailleur Électrique",
   "block.suicidemod.electrical_infuser": "Infuseur Électrique",
   "container.electrical_cutter": "Tailleur Électrique",
+  "container.electrical_infuser": "Infuseur Électrique",
   "item.suicidemod.netherstar_fragment_up": "Fragment du haut d'étoile du nether",
   "item.suicidemod.netherstar_fragment_down": "Fragment du bas d'étoile du nether",
   "item.suicidemod.netherstar_fragment_right": "Fragment de droite d'étoile du netherr",
-  "item.suicidemod.netherstar_fragment_left": "Fragment de gauche d'étoile du nether"
+  "item.suicidemod.netherstar_fragment_left": "Fragment de gauche d'étoile du nether",
+  "item.suicidemod.netherstar_fragment_up_foil": "Fragment du haut d'étoile du nether",
+  "item.suicidemod.netherstar_fragment_down_foil": "Fragment du bas d'étoile du nether",
+  "item.suicidemod.netherstar_fragment_right_foil": "Fragment de droite d'étoile du netherr",
+  "item.suicidemod.netherstar_fragment_left_foil": "Fragment de gauche d'étoile du nether"
 }

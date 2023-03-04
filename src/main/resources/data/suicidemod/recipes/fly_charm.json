@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FUF",
+    "LNR",
+    "FDF"
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "N": {
+      "item": "minecraft:gold_nugget"
+    },
+    "U": {
+      "item": "suicidemod:netherstar_fragment_up_foil"
+    },
+    "R": {
+      "item": "suicidemod:netherstar_fragment_right_foil"
+    },
+    "L": {
+      "item": "suicidemod:netherstar_fragment_left_foil"
+    },
+    "D": {
+      "item": "suicidemod:netherstar_fragment_down_foil"
+    }
+  },
+  "result": {
+    "item": "suicidemod:fly_charm"
+  }
+}

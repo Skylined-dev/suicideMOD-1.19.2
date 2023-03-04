@@ -1,6 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "suicidemod:block/electrical_infuser"
+    "down": "minecraft:block/cobblestone",
+    "east": "suicidemod:block/electrical_infuser_output",
+    "north": "suicidemod:block/electrical_infuser_side",
+    "particle": "minecraft:block/cobblestone",
+    "south": "suicidemod:block/electrical_infuser_side",
+    "up": "minecraft:block/cobblestone",
+    "west": "suicidemod:block/electrical_infuser_input"
   }
 }

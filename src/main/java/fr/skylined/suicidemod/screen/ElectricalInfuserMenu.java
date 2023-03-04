@@ -2,7 +2,7 @@ package fr.skylined.suicidemod.screen;
 
 import fr.skylined.suicidemod.block.ModBlocks;
 import fr.skylined.suicidemod.block.entity.ElectricalCutterBlockEntity;
-import net.minecraft.commands.arguments.coordinates.Coordinates;
+import fr.skylined.suicidemod.block.entity.ElectricalInfuserBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -11,22 +11,23 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
-public class ElectricalCutterMenu extends AbstractContainerMenu {
-    public final ElectricalCutterBlockEntity blockEntity;
+public class ElectricalInfuserMenu  extends AbstractContainerMenu {
+    public final ElectricalInfuserBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
-    public ElectricalCutterMenu(int id, Inventory inv, FriendlyByteBuf extraData){
+    public ElectricalInfuserMenu(int id, Inventory inv, FriendlyByteBuf extraData){
         this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
 
-    public ElectricalCutterMenu(int id, Inventory inv, BlockEntity entity, ContainerData data){
-        super(ModMenuTypes.ELECTRICAL_CUTTER_MENU.get(), id);
-        checkContainerSize(inv, 5);
+    public ElectricalInfuserMenu(int id, Inventory inv, BlockEntity entity, ContainerData data){
+        super(ModMenuTypes.ELECTRICAL_INFUSER_MENU.get(), id);
+        checkContainerSize(inv, 2);
 
-        blockEntity = (ElectricalCutterBlockEntity) entity;
+        blockEntity = (ElectricalInfuserBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
 
@@ -35,10 +36,7 @@ public class ElectricalCutterMenu extends AbstractContainerMenu {
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             this.addSlot(new SlotItemHandler(handler, 0, 76, 12));
-            this.addSlot(new SlotItemHandler(handler, 1, 41, 60));
-            this.addSlot(new SlotItemHandler(handler, 2, 64, 60));
-            this.addSlot(new SlotItemHandler(handler, 3, 87, 60));
-            this.addSlot(new SlotItemHandler(handler, 4, 110, 60));
+            this.addSlot(new SlotItemHandler(handler, 1, 76, 61));
         });
         addDataSlots(data);
     }
@@ -72,7 +70,7 @@ public class ElectricalCutterMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 5;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {
@@ -109,7 +107,7 @@ public class ElectricalCutterMenu extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.ELECTRICAL_CUTTER.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.ELECTRICAL_INFUSER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory){
@@ -126,7 +124,7 @@ public class ElectricalCutterMenu extends AbstractContainerMenu {
         }
     }
 
-    public ElectricalCutterBlockEntity getBlockEntity() {
-        return this.blockEntity;
+    public ElectricalInfuserBlockEntity getBlockEntity() {
+            return this.blockEntity;
     }
 }

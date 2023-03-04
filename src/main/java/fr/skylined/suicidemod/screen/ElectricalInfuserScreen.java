@@ -13,11 +13,12 @@ import net.minecraft.world.entity.player.Inventory;
 
 import java.util.Optional;
 
-public class ElectricalCutterScreen extends AbstractContainerScreen<ElectricalCutterMenu> {
+public class ElectricalInfuserScreen extends AbstractContainerScreen<ElectricalInfuserMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(SuicideMod.MOD_ID,"textures/gui/electrical_cutter_gui.png");
+            new ResourceLocation(SuicideMod.MOD_ID,"textures/gui/electrical_infuser_gui.png");
     private EnergyInfoArea energyInfoArea;
-    public ElectricalCutterScreen(ElectricalCutterMenu menu, Inventory inventory, Component component) {
+
+    public ElectricalInfuserScreen(ElectricalInfuserMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component);
     }
 
@@ -28,6 +29,7 @@ public class ElectricalCutterScreen extends AbstractContainerScreen<ElectricalCu
 
         super.init();
         assignEnergyInfoArea();
+
     }
 
     private void assignEnergyInfoArea() {
@@ -77,7 +79,6 @@ public class ElectricalCutterScreen extends AbstractContainerScreen<ElectricalCu
         super.render(pPoseStack, mouseX, mouseY, delta);
         renderTooltip(pPoseStack, mouseX, mouseY);
     }
-
     private boolean isMouseAboveArea(int pMouseX, int pMouseY, int x, int y, int offsetX, int offsetY, int width, int height) {
         return MouseUtil.isMouseOver(pMouseX, pMouseY, x + offsetX, y + offsetY, width, height);
     }
