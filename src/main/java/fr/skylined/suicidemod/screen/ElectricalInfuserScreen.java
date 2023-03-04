@@ -42,7 +42,8 @@ public class ElectricalInfuserScreen extends AbstractContainerScreen<ElectricalI
     protected void renderLabels(PoseStack pPoseStack, int pMouseX, int pMouseY) {
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
-
+        font.draw(pPoseStack, title, imageWidth / 2.0F - font.width(title) / 2.0F, (float) titleLabelY, 0x404040);
+        font.draw(pPoseStack, playerInventoryTitle, (float) inventoryLabelX, (float) inventoryLabelY, 0x404040);
         renderEnergyAreaTooltips(pPoseStack, pMouseX, pMouseY, x, y);
     }
 

@@ -6,6 +6,8 @@ import fr.skylined.suicidemod.networking.ModMessages;
 import fr.skylined.suicidemod.networking.packets.EnergySyncS2CPacket;
 import fr.skylined.suicidemod.screen.ElectricalCutterMenu;
 import fr.skylined.suicidemod.util.ModEnergyStorage;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.DeathScreen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -96,11 +98,11 @@ public class ElectricalCutterBlockEntity extends BlockEntity implements MenuProv
     }
 
 
-
     @Override
     public Component getDisplayName() {
         return Component.translatable("container.electrical_cutter");
     }
+
 
     @Nullable
     @Override
